@@ -1,0 +1,71 @@
+@import "../../sass/variables.scss";
+
+footer {
+  @include FlexColumnCenter;
+  background-image: url("../../../public/assets/images/footer/cow.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 50vh;
+  max-height: 750px;
+  min-height: 550px;
+  padding: 100px clamp(1.25rem, -4.4643rem + 28.5714vw, 31.25rem);
+  position: relative;
+  width: 100%;
+  justify-content: center;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    border: solid 1px lightgrey;
+  }
+
+  .imageContainer {
+    height: clamp(2.5rem, 2.2619rem + 1.1905vw, 3.75rem);
+    max-width: fit-content;
+    padding: 10px;
+    width: fit-content;
+
+    img {
+      @include Maxsize100;
+    }
+  }
+  p {
+    margin: auto;
+  }
+
+  .content {
+    @include FlexRow;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .column {
+    @include FlexColumn;
+    width: 20%;
+
+    .column-ul {
+      @include UlNormalize;
+    }
+  }
+  .credits {
+    align-items: center;
+    bottom: 0;
+    color: black;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    p {
+      color: white;
+      font-weight: 600;
+      margin: 0;
+    }
+  }
+}

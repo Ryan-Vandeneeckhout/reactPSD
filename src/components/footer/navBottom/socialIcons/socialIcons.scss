@@ -1,0 +1,24 @@
+@import "../../../../sass/variables.scss";
+
+.icons-social-gallery {
+  width: 100%;
+
+  ul {
+    @include FlexRowCenter;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+
+    li {
+      @include FlexColumnCenter;
+      background-color: green;
+      border-radius: 90%;
+      height: 40px;
+      justify-content: center;
+      width: 40px;
+      img {
+        height: 14px;
+      }
+    }
+  }
+}

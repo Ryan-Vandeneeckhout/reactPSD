@@ -1,0 +1,43 @@
+@import "../../../sass/variables.scss";
+
+.gallery-section {
+  background-image: url("../../../../public/assets/images/galleryPictures/grass.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: fit-content;
+  min-height: 100vh;
+  min-height: 730px;
+  min-width: 100%;
+  .wrapper {
+    height: 100%;
+    padding: 10% 0;
+    .content {
+      @include FlexColumnCenter;
+      height: 100%;
+      width: 100%;
+    }
+    .gallery-pictures {
+      align-items: baseline;
+      display: grid;
+      grid-gap: 10px 10px;
+      grid-template-columns: repeat(6, 1fr);
+      grid-auto-rows: clamp(6.25rem, 4.4643rem + 8.9286vw, 15.625rem) clamp(9.375rem, 6.994rem + 11.9048vw, 21.875rem) clamp(6.25rem, 4.4643rem + 8.9286vw, 15.625rem);
+      width: 100%;
+      height: 100%;
+
+      .image-container {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+      }
+
+      .first-row-item {
+        grid-column: span 2;
+      }
+      .second-row-item {
+        grid-column: span 3;
+      }
+    }
+  }
+}

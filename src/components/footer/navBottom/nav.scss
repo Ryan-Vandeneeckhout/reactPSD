@@ -1,0 +1,18 @@
+@import "../../../sass/variables.scss";
+@import "../../../sass/styleGuide.scss";
+
+.quick-links-nav {
+  color: black;
+  font-family: $fontBodyType;
+  font-size: $fontSmall;
+  font-weight: 600;
+  text-decoration: none;
+  li {
+    height: 40px;
+    padding: 10px 0;
+    width: 100%;
+    a {
+      color: black;
+    }
+  }
+}

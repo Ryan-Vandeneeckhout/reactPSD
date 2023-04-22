@@ -1,0 +1,54 @@
+@import "../../../sass/variables.scss";
+
+.about-us-section {
+  @include FlexColumnCenter;
+  height: fit-content;
+  justify-content: center;
+  max-height: fit-content;
+  min-height: 420px;
+  overflow-y: hidden;
+
+  .content {
+    @include FlexRow;
+    justify-content: space-between;
+    padding: clamp(3.75rem, 3.2738rem + 2.381vw, 6.25rem) 0;
+    width: 100%;
+  }
+
+  .textContent {
+    max-width: 320px;
+    width: 50%;
+  }
+  .text-box {
+    @include FlexColumnCenter;
+    background-color: #207200;
+    border-radius: 25px;
+    color: white;
+    height: 25vh;
+    justify-content: center;
+    max-height: 200px;
+    min-height: 200px;
+    padding: 30px;
+    width: 40%;
+    min-width: 280px;
+
+    h3 {
+        font-size: 24px;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 899px) {
+  .about-us-section {
+    .content {
+      @include FlexColumnCenter;
+    }
+    .textContent {
+      width: 100%;
+    }
+    .text-box {
+      margin-top: 40px;
+      width: 100%;
+    }
+  }
+}

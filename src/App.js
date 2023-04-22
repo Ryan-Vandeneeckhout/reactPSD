@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import "./sass/style.scss";
+import SideMenu from "./components/sideMenus/sideMenu/SideMenu";
+import { Overlay } from "./components/overlays/overlay";
+import { Main } from "./components/main/main";
+import { Navigation } from "./components/navigation/Navigation";
+import { Footer } from "./components/footer/footer";
 
 function App() {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const ShowSideMenu = () => {
+    setShowMenu((showMenu) => !showMenu);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <header>
+          <Navigation />
+        </header>
+        <SideMenu showMenu={showMenu} />
+        <Overlay showMenu={showMenu} ShowSideMenu={ShowSideMenu} />
+        <Routes>
+          <Route extact path="/" element={<Main />} />
+        </Routes>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

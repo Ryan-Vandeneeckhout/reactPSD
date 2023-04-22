@@ -1,0 +1,60 @@
+@import "../../../sass/variables";
+
+.our-products-section {
+  height: fit-content;
+  min-height: 100vh;
+  min-height: 730px;
+  min-width: 100%;
+
+  .wrapper {
+    height: fit-content;
+    padding: 10% 0;
+  }
+
+  .content {
+    @include FlexColumnCenter;
+    height: 100%;
+    width: 100%;
+
+    .gallery-content {
+      align-items: baseline;
+      display: grid;
+      grid-gap: 40px 30px;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 250px));
+      justify-content: center;
+      width: 100%;
+
+      .gallery-item {
+        outline: solid 1px lightgrey;
+        position: relative;
+
+        .imageContainer {
+          width: 100%;
+        }
+        .bottomTextContainer {
+          padding: 20px;
+          h4 {
+            margin: 10px 0;
+          }
+
+          p {
+            margin: 0;
+            margin: 10px 0;
+          }
+        }
+
+        button {
+          background-color: green;
+          border-radius: 25px;
+          border: none;
+          bottom: -20px;
+          color: white;
+          padding: 10px 20px;
+          position: absolute;
+          text-transform: capitalize;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}

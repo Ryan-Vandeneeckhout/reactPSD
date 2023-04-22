@@ -1,0 +1,59 @@
+@import "../../../sass/variables";
+
+.opening-section {
+  @include backgroundImageCenterCoverNORepeat;
+  @include FlexColumnCenter;
+  background-image: url("../../../../public/assets/images/header/background.png");
+  justify-content: center;
+  min-height: 100vh;
+
+  .flex-row-column {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    .contentText {
+      @include FlexColumn;
+      justify-content: center;
+      width: 50%;
+      max-width: 320px;
+
+      p {
+        text-align: left;
+      }
+    }
+
+    .imageContainer {
+      width: 60%;
+
+      img {
+        @include Maxsize100;
+      }
+    }
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 899px) {
+    .opening-section {
+        min-height: 100vh;
+        min-width: 100%;
+        min-height: 730px;
+        height: 100vh;
+      
+        .flex-row-column {
+          display: flex;
+          align-items: center;
+          flex-direction: column-reverse;
+          width: 100%;
+
+          .contentText {
+            width: 100%;
+          }
+          .imageContainer {
+            width: 100%;
+            overflow: hidden;
+            min-width: 300px;
+            min-width: 100%;
+          }
+        }
+      }
+  }

@@ -1,0 +1,87 @@
+@import "../../../sass/variables";
+
+.news-section {
+  background-color: green;
+  color: white;
+  height: fit-content;
+  min-height: 730px;
+  min-width: 100%;
+  .wrapper {
+    height: 100%;
+    padding: 10% 0;
+  }
+
+  .content {
+    @include FlexColumnCenter;
+    height: 100%;
+    width: 100%;
+
+    .gallery-news {
+      @include FlexRow;
+      flex-grow: 3;
+      height: fit-content;
+      justify-content: space-between;
+      .news-item:not(:last-of-type) {
+        margin-right: 1%;
+      }
+      .news-item {
+        background-color: white;
+        color: black;
+        height: fit-content;
+        min-width: 280px;
+        padding: 20px;
+        width: 32%;
+        h4 {
+          font-size: 18px;
+          line-height: 28px;
+        }
+        a {
+          border-radius: 35px;
+          margin-bottom: 20px;
+          min-width: 150px;
+          padding: 15px;
+          text-align: center;
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 620px) and (max-width: 899px) {
+  .news-section {
+    .content {
+      .gallery-news {
+        .news-item:nth-child(n + 3) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 619px) {
+    .news-section {
+      .content {
+        .gallery-news {
+            justify-content: center;
+            align-content: center;
+          .news-item:nth-child(n + 2) {
+            display: none;
+          }
+          .news-item {
+            @include FlexColumn;
+            align-items: center;
+            text-align: center;
+
+            h4 {
+                margin: 10px 0;
+            }
+
+            p {
+                margin: 10px 0;
+            }
+          }
+        }
+      }
+    }
+  }

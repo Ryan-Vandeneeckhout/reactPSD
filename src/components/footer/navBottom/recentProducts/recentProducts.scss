@@ -1,0 +1,17 @@
+@import "../../../../sass/variables.scss";
+
+.recent-products {
+    flex-direction: row;
+  li {
+    @include FlexRowCenter;
+    height: 80px;
+    padding: 10px 0;
+    width: 100%;
+
+    img {
+      height: 100%;
+      margin-right: 20px;
+      width: 60px;
+    }
+  }
+}
