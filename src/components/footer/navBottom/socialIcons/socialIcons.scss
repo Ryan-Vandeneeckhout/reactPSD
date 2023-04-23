@@ -13,9 +13,20 @@
       @include FlexColumnCenter;
       background-color: green;
       border-radius: 90%;
+      cursor: pointer;
       height: 40px;
       justify-content: center;
+      transform: scale(1);
+      transition: background-color 200ms ease-in, transform 300ms linear;
       width: 40px;
+
+      &:hover {
+        background-color: goldenrod;
+        color: green;
+        outline: solid black 1px;
+        transition: background-color 200ms ease-in,  transform 300ms linear;
+        transform: scale(1.05);
+      }
       img {
         height: 14px;
       }

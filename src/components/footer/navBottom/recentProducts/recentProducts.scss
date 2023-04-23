@@ -1,7 +1,6 @@
 @import "../../../../sass/variables.scss";
 
 .recent-products {
-    flex-direction: row;
   li {
     @include FlexRowCenter;
     height: 80px;
@@ -12,6 +11,16 @@
       height: 100%;
       margin-right: 20px;
       width: 60px;
+    }
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 999px) {
+  .recent-products {
+    display: flex;
+    flex-direction: row;
+
+    li:nth-child(n + 3) {
+      display: none;
     }
   }
 }

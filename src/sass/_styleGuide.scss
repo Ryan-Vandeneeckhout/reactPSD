@@ -41,6 +41,9 @@ p {
   color: green;
   font-weight: 900;
 }
+button {
+  font-family: $fontBodyType;
+}
 .buttonAnchor {
   display: block;
   background-color: #207200;

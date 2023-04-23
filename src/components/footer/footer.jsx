@@ -10,19 +10,21 @@ export const Footer = () => {
       <div className="wrapper">
         <div className="content">
           <div className="column">
-            <div className="imageContainer">
-              <img
-                src="./assets/images/navigation/logo.png"
-                alt="company Logo"
-                aria-label="company logo OREG"
-              />
+            <h3 className="social-header">Social Links</h3>
+            <div className="content-social-links">
+              <div className="imageContainer">
+                <img
+                  src="./assets/images/navigation/logo.png"
+                  alt="company Logo"
+                  aria-label="company logo OREG"
+                />
+              </div>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
+                aut expedita corrupti. Lorem ipsum, dolor sit amet consectetur
+                adipisicing elit. Nihil aut expedita corrupti.
+              </p>
             </div>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil
-              aut expedita corrupti. Lorem ipsum, dolor sit amet consectetur
-              adipisicing elit. Nihil aut expedita corrupti.
-            </p>
-
             <SocialIcons />
           </div>
           <Nav />

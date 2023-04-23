@@ -33,6 +33,19 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script>
+      function updateWindow() {
+        document.body.style.paddingLeft =
+          window.innerWidth - document.body.clientWidth;
+        document.body.onclick = function () {
+          document.body.style.paddingLeft =
+            window.innerWidth - document.body.clientWidth;
+        };
+      }
+      window.onload = updateWindow();
+      window.addEventListener("resize", updateWindow());
+      updateWindow();
+    </script>
     <div id="root"></div>
   </body>
 </html>

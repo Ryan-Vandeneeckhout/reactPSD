@@ -6,13 +6,22 @@
   font-family: $fontBodyType;
   font-size: $fontSmall;
   font-weight: 600;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
   text-decoration: none;
   li {
     height: 40px;
     padding: 10px 0;
     width: 100%;
+    margin-left: 5px;
+    max-width: fit-content;
+
     a {
       color: black;
+      &:hover {
+        color: green;
+      }
     }
   }
 }

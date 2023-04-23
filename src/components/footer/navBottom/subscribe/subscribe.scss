@@ -1,5 +1,14 @@
 .contact-item {
+  p {
+    margin: 10px 0;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 999px) {
+  .contact-item {
     p {
-        margin: 10px 0;
+      width: 50%;
+      min-width: 120px;
     }
+  }
 }

@@ -15,31 +15,58 @@
     @include FlexColumnCenter;
     height: 100%;
     width: 100%;
+    .loadMoreButton {
+      margin-top: 50px;
+      text-transform: uppercase;
+      background-color: green;
+      color: white;
+      padding: 10px 20px;
+      font-weight: 600;
+      border: none;
+      border-radius: 25px;
 
+    }
     .gallery-content {
       align-items: baseline;
       display: grid;
       grid-gap: 40px 30px;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 250px));
+      grid-template-columns: repeat(auto-fill, minmax(200px, 200px));
       justify-content: center;
       width: 100%;
 
+    
+
       .gallery-item {
-        outline: solid 1px lightgrey;
         position: relative;
 
         .imageContainer {
           width: 100%;
         }
         .bottomTextContainer {
+          border: dotted 1px lightgrey;
+          border-top: none;
           padding: 20px;
+
           h4 {
             margin: 10px 0;
+            letter-spacing: 2px;
           }
 
           p {
             margin: 0;
             margin: 10px 0;
+          }
+        }
+
+        .gallery-price-container {
+          @include FlexRowCenter;
+          .gallery-price-normal {
+            text-decoration: line-through;
+          }
+
+          p {
+            margin-right: 10px;
+            color: green;
           }
         }
 
@@ -49,10 +76,15 @@
           border: none;
           bottom: -20px;
           color: white;
+          cursor: pointer;
           padding: 10px 20px;
           position: absolute;
           text-transform: capitalize;
           z-index: 1;
+
+          &:hover {
+            background-color: goldenrod;
+          }
         }
       }
     }

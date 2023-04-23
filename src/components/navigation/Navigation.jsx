@@ -1,8 +1,11 @@
 import { NavigationButtonMap } from "./NavgationButtonMap.jsx";
 import { NavButton } from "./NavButton.jsx";
 import "./navigation.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
 
 export const Navigation = (props) => {
+  const [hover, setHover] = useState(false);
   return (
     <section
       className={`site-main-home-wrapper nav-upper-section ${
@@ -20,11 +23,24 @@ export const Navigation = (props) => {
           />
         </div>
         <nav>
-          <ul>
+          <ul className="desktop-nav">
             {NavigationButtonMap.map(({ NavText }, index) => {
               return <NavButton key={index} NavText={NavText} />;
             })}
           </ul>
+          <button
+            className="mobile-button-nav"
+            onClick={props.mobilenavShowFunction}
+            aria-label={`Select button for opening mobile navigation menu`}
+            onMouseEnter={() => {
+              setHover(true);
+            }}
+            onMouseLeave={() => {
+              setHover(false);
+            }}
+          >
+            <FontAwesomeIcon icon={hover ? "fa-times" : "fa-bars"} />
+          </button>
         </nav>
       </div>
     </section>
