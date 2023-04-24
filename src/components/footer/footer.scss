@@ -89,12 +89,12 @@ footer {
       display: inline;
     }
     .content {
-      justify-content: center;
       width: 100%;
     }
     .column {
       margin-bottom: 20px;
       width: 100%;
+      max-width: 100%;
   
       .column-ul {
         @include UlNormalize;

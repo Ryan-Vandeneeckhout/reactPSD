@@ -3,12 +3,13 @@
 
 .quick-links-nav {
   color: black;
+  display: flex;
   font-family: $fontBodyType;
   font-size: $fontSmall;
   font-weight: 600;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-evenly;
   text-decoration: none;
   li {
     height: 40px;
