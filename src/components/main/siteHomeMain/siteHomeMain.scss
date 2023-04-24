@@ -15,6 +15,7 @@
     .contentText {
       @include FlexColumn;
       justify-content: center;
+      text-align: left;
       width: 50%;
       max-width: 320px;
 

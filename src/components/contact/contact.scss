@@ -1,0 +1,13 @@
+@import "../../sass/variables.scss";
+
+.banner {
+  @include backgroundImageCenterCoverNORepeat;
+  @include FlexColumnCenter;
+  background-image: url("../../../public/assets/images/contact/contact.jpg");
+  color: white;
+  height: fit-content;
+  justify-content: center;
+  min-height: 280px;
+  overflow-y: hidden;
+  padding: 100px;
+}

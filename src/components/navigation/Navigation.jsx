@@ -24,8 +24,8 @@ export const Navigation = (props) => {
         </div>
         <nav>
           <ul className="desktop-nav">
-            {NavigationButtonMap.map(({ NavText }, index) => {
-              return <NavButton key={index} NavText={NavText} />;
+            {NavigationButtonMap.map(({ NavText, href }, index) => {
+              return <NavButton key={index} NavText={NavText} href={href} />;
             })}
           </ul>
           <button
