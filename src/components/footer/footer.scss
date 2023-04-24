@@ -9,7 +9,6 @@ footer {
   justify-content: center;
   max-height: fit-content;
   min-height: 550px;
- 
   position: relative;
   width: 100%;
   .wrapper {
@@ -18,8 +17,8 @@ footer {
     justify-content: center;
     max-height: fit-content;
     min-height: 550px;
+    padding: clamp(6.25rem, 7.5195rem + -3.9063vw, 3.125rem) clamp(1.25rem, -4.4643rem + 28.5714vw, 31.25rem);
     width: 100%;
-    padding: clamp(6.25rem, 7.5195rem + -3.9063vw, 3.125rem) clamp(1.25rem, -5.8594rem + 21.875vw, 18.75rem);
   }
 
   h3 {
@@ -59,8 +58,7 @@ footer {
   }
   .column {
     @include FlexColumn;
-    width: 22%;
-    max-width: clamp(20rem, 22.5391rem + -7.8125vw, 13.75rem);;
+    max-width: 200px;
 
     .column-ul {
       @include UlNormalize;
@@ -95,8 +93,29 @@ footer {
       width: 100%;
     }
     .column {
-      width: 100%;
       margin-bottom: 20px;
+      width: 100%;
+  
+      .column-ul {
+        @include UlNormalize;
+        @include FlexRowCenter;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 841px) and (max-width: 1240px) {
+
+  footer {
+    .social-header {
+      display: inline;
+    }
+    .content {
+      width: 100%;
+    }
+    .column {
+      max-width: 40%;
+      margin-bottom: 60px;
   
       .column-ul {
         @include UlNormalize;
