@@ -4,7 +4,7 @@ export const Subsribe = () => {
   return (
     <div className="column">
       <h3>Subscribe</h3>
-      <ul className="column-ul">
+      <ul className="column-ul subscribe">
         <div className="contact-item">
           <p className="boldp">Address:</p>
           <p>5919 Trussville Crossings Pkwy, Birmingham AL 35235</p>
