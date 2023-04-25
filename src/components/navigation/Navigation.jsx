@@ -28,6 +28,9 @@ export const Navigation = (props) => {
               return <NavButton key={index} NavText={NavText} href={href} />;
             })}
           </ul>
+          <div className="shoppingCartIcon">
+            <FontAwesomeIcon size="1x" icon="fa-cart-shopping" />
+          </div>
           <button
             className="mobile-button-nav"
             onClick={props.mobilenavShowFunction}

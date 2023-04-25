@@ -10,4 +10,158 @@
   min-height: 280px;
   overflow-y: hidden;
   padding: 100px;
+
+  h2 {
+    font-size: clamp(1.5rem, 1.2297rem + 1.3514vw, 2.75rem);
+
+  }
+}
+.contact-us-section {
+  min-height: 480px;
+  height: fit-content;
+
+  .wrapper {
+    @include FlexColumnCenter;
+    @include Maxsize100;
+    justify-content: center;
+    padding: clamp(3.125rem, 2.4493rem + 3.3784vw, 6.25rem) 0;
+  }
+
+  .content {
+    @include FlexRow;
+    height: fit-content;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 380px;
+
+    ul {
+      @include FlexColumn;
+      justify-content: space-between;
+      width: 45%;
+      height: 100%;
+      min-height: 380px;
+
+      li {
+        border-left: green solid 5px;
+        height: 30%;
+        max-height: 100px;
+        padding: 20px;
+        box-shadow: 0px 0px 5px 6px rgba(224, 224, 224, 0.75);
+        -webkit-box-shadow: 0px 0px 5px 6px rgba(224, 224, 224, 0.75);
+        -moz-box-shadow: 0px 0px 5px 6px rgba(224, 224, 224, 0.75);
+
+        p {
+          margin: 0px;
+          margin-bottom: 5px;
+        }
+      }
+    }
+    .forms {
+      -moz-box-shadow: 0px 0px 5px 6px rgba(224, 224, 224, 0.75);
+      -webkit-box-shadow: 0px 0px 5px 6px rgba(224, 224, 224, 0.75);
+      @include FlexColumn;
+      box-shadow: 0px 0px 5px 6px rgba(224, 224, 224, 0.75);
+      height: 100%;
+      min-height: 380px;
+      padding: 40px;
+      width: 45%;
+
+      form {
+        @include FlexColumn;
+        height: 100%;
+        min-height: 380px;
+        justify-content: space-between;
+        button {
+          align-self: center;
+          background-color: green;
+          border-radius: 25px;
+          border: none;
+          color: white;
+          font-weight: 800;
+          padding: 15px 10px;
+          width: 200px;
+        }
+        textarea {
+          -moz-box-shadow: 0px 0px 1px 1px rgba(186, 186, 186, 0.75);
+          -webkit-box-shadow: 0px 0px 1px 1px rgba(186, 186, 186, 0.75);
+          border: none;
+          box-shadow: 0px 0px 1px 1px rgba(186, 186, 186, 0.75);
+          font-size: 12px;
+          height: 100px;
+          max-height: 100px;
+          max-width: 100%;
+          padding: 15px;
+        }
+
+        input {
+          border: none;
+          -moz-box-shadow: 0px 0px 1px 1px rgba(186, 186, 186, 0.75);
+          -webkit-box-shadow: 0px 0px 1px 1px rgba(186, 186, 186, 0.75);
+          box-shadow: 0px 0px 1px 1px rgba(186, 186, 186, 0.75);
+        }
+
+        .text-input-50-50 {
+          @include FlexRowCenter;
+          justify-content: space-between;
+          input {
+            width: 48%;
+          }
+        }
+        .text-input-100 {
+          input {
+            width: 100%;
+          }
+        }
+
+        input {
+          padding: 15px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1299px) {
+  .contact-us-section {
+    .content {
+      @include FlexColumn;
+
+      ul {
+        width: 100%;
+        li {
+          margin-bottom: 20px;
+        }
+      }
+      .forms {
+        width: 100%;
+        input {
+          margin-bottom: 20px;
+        }
+        textarea {
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 599px) {
+  .contact-us-section {
+    .content {
+      .forms {
+        width: 100%;
+        input {
+          width: 100%;
+        }
+        form {
+        .text-input-50-50 {
+          @include FlexColumn;
+          input {
+            width: 100%;
+          }
+        }
+      }
+      }
+    }
+  }
 }

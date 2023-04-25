@@ -1,4 +1,5 @@
 import "./footer.scss";
+import { Credits } from "./credits/credits";
 import { Nav } from "./navBottom/nav";
 import { RecentProducts } from "./navBottom/recentProducts/recentProducts";
 import { SocialIcons } from "./navBottom/socialIcons/socialIcons";
@@ -32,9 +33,7 @@ export const Footer = () => {
           <Subsribe />
         </div>
       </div>
-      <div className="credits">
-        <p>Copyright &copy; 2023. All Rights Reserved</p>
-      </div>
+      <Credits textCredits="Copyright &copy; 2023. All Rights Reserved" />
     </footer>
   );
 };

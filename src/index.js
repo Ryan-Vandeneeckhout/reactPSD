@@ -18,6 +18,7 @@ import {
   faBuildingColumns,
   faArrowRightFromBracket,
   faCircleUser,
+  faShoppingCart,
 } from "@fortawesome/free-solid-svg-icons";
 // FontAwesome Global Icons Added
 library.add(
@@ -32,7 +33,8 @@ library.add(
   faMusic,
   faBuildingColumns,
   faArrowRightFromBracket,
-  faCircleUser
+  faCircleUser,
+  faShoppingCart
 );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));

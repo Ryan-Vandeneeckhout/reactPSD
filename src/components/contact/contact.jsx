@@ -1,5 +1,7 @@
+import { Forms } from "../forms/forms";
 import { SiteHomeMainWrapper } from "../sectionWrappers/siteMainHomeWrapper";
 import "./contact.scss";
+import { ContactIDsItemMap } from "./contactIDsItemMap";
 
 export const Contact = () => {
   return (
@@ -7,17 +9,20 @@ export const Contact = () => {
       <section className="banner">
         <h2>Contact Us</h2>
       </section>
-      <SiteHomeMainWrapper wrapperSpecialClass="about-us-section">
+      <SiteHomeMainWrapper wrapperSpecialClass="contact-us-section">
         <div className="content">
-          <div className="addressContact">
-            <div className="addressItem">
-              <p className="boldp"></p>
-            </div>
-          </div>
-          <section>
-            <form>
-              <button>Send Message</button>
-            </form>
+          <ul className="ul-normalize">
+            {ContactIDsItemMap.map((item, index) => {
+              return (
+                <li className="addressContact" key={index}>
+                  <p className="boldp">{item.id}</p>
+                  <p>{item.text}</p>
+                </li>
+              );
+            })}
+          </ul>
+          <section className="forms">
+            <Forms submitButtonText="Send Message" />
           </section>
         </div>
       </SiteHomeMainWrapper>
