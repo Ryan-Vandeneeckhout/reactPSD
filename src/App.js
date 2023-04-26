@@ -8,6 +8,7 @@ import { Main } from "./components/main/main";
 import { Navigation } from "./components/navigation/Navigation";
 import { Footer } from "./components/footer/footer";
 import { Contact } from "./components/contact/contact";
+import { Blog } from "./components/blog/blog";
 
 function App() {
   const [showMenu, setShowMenu] = useState(false);
@@ -26,6 +27,7 @@ function App() {
         <Overlay showMenu={showMenu} ShowSideMenu={ShowSideMenu} />
         <Routes>
           <Route extact path="/" element={<Main />} />
+          <Route extact path="/blog" element={<Blog />} />
           <Route extact path="/contactus" element={<Contact />} />
         </Routes>
         <Footer />

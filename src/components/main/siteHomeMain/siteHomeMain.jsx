@@ -23,7 +23,7 @@ export const SiteHomeMain = () => {
         </div>
         <div className="imageContainer">
           <img
-            src="./assets/images/header/header.png"
+            src="./assets/images/header/header.webp"
             alt="plate of fruit/main background"
           />
         </div>

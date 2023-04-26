@@ -3,7 +3,7 @@
 .opening-section {
   @include backgroundImageCenterCoverNORepeat;
   @include FlexColumnCenter;
-  background-image: url("../../../../public/assets/images/header/background.png");
+  background-image: url("../../../../public/assets/images/header/background.webp");
   justify-content: center;
   min-height: 100vh;
 

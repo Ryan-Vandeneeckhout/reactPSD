@@ -1,0 +1,73 @@
+@import "../../sass/variables.scss";
+
+@mixin side-default {
+  background-color: white;
+  padding: 40px 40px;
+  width: 100%;
+}
+
+.bannerBackground {
+  @include backgroundImageCenterCoverNORepeat;
+  background-image: url("../../../public/assets/images/contact/contact.jpg");
+  min-height: 280px;
+  position: relative;
+
+  h2 {
+    bottom: -40px;
+    color: rgb(4, 178, 4);
+    font-size: 5rem;
+    left: 25%;
+    margin: 0;
+    position: absolute;
+    text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black,
+      -1px 1px 0 black, 3px 3px 5px #333;
+    text-transform: uppercase;
+  }
+}
+
+.blog-section {
+  background-color: #d9d6d6;
+  min-height: 100vh;
+
+  h2,
+  h3 {
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .wrapper {
+    padding: 50px 0;
+  }
+
+  .content {
+    @include FlexRow;
+    justify-content: space-between;
+
+    aside {
+      width: 35%;
+      .side-image {
+        @include side-default;
+        margin-bottom: 40px;
+      }
+
+      .recent-posts {
+        @include side-default;
+      }
+
+      p {
+        max-width: 320px;
+      }
+    }
+    .textContent {
+      max-width: 600px;
+      width: 60%;
+
+      .blog {
+        background-color: white;
+        max-width: 600px;
+        padding: 40px;
+        width: 100%;
+      }
+    }
+  }
+}
