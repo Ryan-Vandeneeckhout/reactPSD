@@ -25,7 +25,7 @@ export const OurProductsMain = () => {
 
   return (
     <SiteHomeMainWrapper wrapperSpecialClass="our-products-section">
-      <div className="content">
+      <div className="content" id="shop-now">
         <ContentText headerText="Our Products" />
 
         <div className="gallery-content">

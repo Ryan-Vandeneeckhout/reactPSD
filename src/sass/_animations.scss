@@ -1,0 +1,49 @@
+@keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @-webkit-keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+  .animationLeft {
+    animation: fadein 3s 1;
+    transform: translatex(0px);
+    transition: transform 300ms linear;
+    will-change: transform;
+  }
+  .animationZero {
+    opacity: 0;
+    transform: translatex(-600px);
+    transition: transform 200ms linear;
+    will-change: transform;
+  }
+  
+  .animationZero2 {
+    opacity: 0;
+    transform: translatex(600px);
+    transition: transform 200ms linear;
+    will-change: transform;
+  }
+  
+  
+  .animationUP {
+    opacity: 0;
+    transform: translateY(300px);
+    transition: transform 200ms linear;
+    will-change: transform;
+  }
+  

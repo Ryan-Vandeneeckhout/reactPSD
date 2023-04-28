@@ -6,6 +6,11 @@ $fontForm: 26px;
 $fontHeadingType: "Lora", "Times New Roman", Times, serif;
 $fontBodyType: "Barlow", "Times New Roman", Times, serif;
 
+
+.App {
+  overflow-x: hidden;
+
+}
 img {
   @include Maxsize100;
 }
