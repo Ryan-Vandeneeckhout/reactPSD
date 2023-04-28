@@ -4,9 +4,9 @@ import "./contact.scss";
 import { ContactIDsItemMap } from "./contactIDsItemMap";
 
 export const Contact = () => {
-  const renderContactItem = (item, index) => {
+  const renderContactItem = (item) => {
     return (
-      <li className="addressContact" key={index}>
+      <li className="addressContact" key={item.id}>
         <p className="boldp">{item.id}</p>
         <p>{item.text}</p>
       </li>
