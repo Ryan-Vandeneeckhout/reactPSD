@@ -4,7 +4,7 @@ import { NavigationButtonMap } from "./NavgationButtonMap";
 import { NavButton } from "./NavButton";
 import "./navigation.scss";
 
-export const Navigation = ({ contentItemView, mobilenavShowFunction }) => {
+export const Navigation = ({ contentItemView, showSideMenuFunction }) => {
   const [hover, setHover] = useState(false);
 
   const handleMouseEnter = () => {
@@ -40,7 +40,7 @@ export const Navigation = ({ contentItemView, mobilenavShowFunction }) => {
           </div>
           <button
             className="mobile-button-nav"
-            onClick={mobilenavShowFunction}
+            onClick={showSideMenuFunction}
             aria-label={`Select button for opening mobile navigation menu`}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}

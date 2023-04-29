@@ -1,0 +1,74 @@
+@import "../../../sass/variables.scss";
+
+.open-side-menu-left {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  transition: transform 300ms linear;
+  will-change: transform;
+}
+
+.open-side-menu-right {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  transition: transform 300ms linear;
+  will-change: transform;
+}
+
+.closed-side-menu {
+  -webkit-transform: none;
+  transform: none;
+  transition: transform 300ms linear;
+  will-change: transform;
+}
+
+.side-menu-navigation {
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  @include FlexColumnCenter;
+  background-color: whitesmoke;
+  border-left: solid grey 1px;
+  border-top: solid grey 1px;
+  bottom: 0;
+  right: 0;
+  max-width: 300px;
+  min-width: 250px;
+  position: fixed;
+  top: 60px;
+  width: 25vw;
+  z-index: 99;
+
+  .wrapper {
+    height: 100%;
+    width: 100%;
+  }
+
+  ul {
+    height: 100%;
+    width: 100%;
+
+    li {
+      @include FlexRowCenter;
+      cursor: pointer;
+      height: 60px;
+      justify-content: center;
+      outline: solid 1px black;
+      text-decoration: none;
+      width: 100%;
+
+      a {
+        color: black;
+      }
+      &:hover {
+        background-color: black;
+      }
+      &:hover a {
+        color: white;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1320px) {
+    .side-menu-navigation {
+        display: none;
+    }
+  }
