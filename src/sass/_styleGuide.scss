@@ -33,12 +33,18 @@ h4 {
   font-family: $fontHeadingType;
   font-size: 16px;
 }
+li {
+  font-family: $fontBodyType;
+}
 p {
   font-family: $fontBodyType;
   font-size: $fontSmall;
   font-weight: 400;
   line-height: 22px;
   margin: 40px 0;
+}
+.italicsp {
+  font-style: italic;
 }
 .boldp {
   font-weight: 600;
@@ -49,6 +55,10 @@ p {
 }
 button {
   font-family: $fontBodyType;
+}
+.green-text {
+  color: green;
+  font-weight: 600;
 }
 .buttonAnchor {
   display: block;

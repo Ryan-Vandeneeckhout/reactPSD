@@ -1,5 +1,7 @@
+import TextInput from "../forms/inputs/TextInput.jsx";
 import { SiteHomeMainWrapper } from "../sectionWrappers/siteMainHomeWrapper.jsx";
 import "./blog.scss";
+import { blogMapItem } from "./blogMapItem.jsx";
 
 export const Blog = () => {
   return (
@@ -11,7 +13,10 @@ export const Blog = () => {
         <div className="content">
           <aside>
             <div className="side-image">
-              <img alt="farm fresh" />
+              <img
+                alt="farm fresh"
+                src="./assets/images/galleryPictures/gallery5.jpg"
+              />
               <h3>About Farm Fresh</h3>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui
@@ -20,7 +25,7 @@ export const Blog = () => {
             </div>
             <div className="recent-posts">
               <h3>Recent Posts</h3>
-              <ul>
+              <ul className="ul-normalize">
                 <li>Farm Fresh</li>
                 <li>Pepper Pops</li>
                 <li>Dirt or Super Power</li>
@@ -28,34 +33,65 @@ export const Blog = () => {
               </ul>
             </div>
           </aside>
-          <div className="textContent">
-            <div className="blog">
-              <h2>Why I became a Blogger</h2>
-              <p>Monday April 24, 2023 by Farm Fresh</p>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
-                voluptatem laudantium repellendus, alias voluptatibus a ipsum
-                rem praesentium sapiente, dignissimos assumenda harum non
-                voluptas dolores tempore repellat exercitationem nam. Esse!
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Accusantium nobis nemo cumque provident quos minus molestiae
-                officia modi reiciendis praesentium quas optio sunt laborum
-                iure, quo fugit quibusdam, tempora sed.
-              </p>
-            </div>
-            <div className="posts">
-              <ul>
-                <li>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Harum hic consequatur illum ipsa repellendus consectetur
-                    reiciendis, mollitia, itaque voluptate quae sapiente iste
-                    omnis incidunt qui reprehenderit voluptatibus quidem, natus
-                    porro.
-                  </p>
-                </li>
-              </ul>
-            </div>
+          <div className="content-blog">
+            {blogMapItem.map(
+              ({ h2title, dateCreated, Author, Content, posts }) => {
+                return (
+                  <>
+                    <div className="blog">
+                      <h2>{h2title}</h2>
+                      <p className="italicsp">
+                        {dateCreated} by{" "}
+                        <span className="green-text">{Author}</span>
+                      </p>
+                      {Content.map((item, index) => {
+                        return (
+                          <p key={index} className="content-text-blog">
+                            {item.pcontent}
+                          </p>
+                        );
+                      })}
+                    </div>
+                    <ul className="posts ul-normalize ">
+                      {posts.map((item, index) => {
+                        return (
+                          <li key={index} className="post-item">
+                            <div
+                              className="image-container"
+                              style={{ backgroundImage: `url(${item.image})` }}
+                            />
+                            <div className="post-text-content">
+                              <p className="green-text date-p">
+                                Posted: {item.date}
+                              </p>
+                              <p>{item.pcontent}</p>
+                            </div>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                    <div className="create-post">
+                      <form>
+                        <div className="upper-form">
+                          <TextInput
+                            placeholderInput="Email"
+                            labelShow={false}
+                          />
+                          <TextInput
+                            placeholderInput="Name"
+                            labelShow={false}
+                          />
+                        </div>
+
+                        <textarea />
+
+                        <button>Post Comment</button>
+                      </form>
+                    </div>
+                  </>
+                );
+              }
+            )}
           </div>
         </div>
       </SiteHomeMainWrapper>
