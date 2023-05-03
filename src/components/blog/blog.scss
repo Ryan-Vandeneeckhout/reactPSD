@@ -155,8 +155,8 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 120px;
-            max-width: 120px;
+            height: clamp(3.75rem, 3.0357rem + 3.5714vw, 7.5rem);
+            max-width: clamp(3.75rem, 3.0357rem + 3.5714vw, 7.5rem);
             outline: solid black 3px;
             width: 20%;
           }
@@ -166,6 +166,24 @@
             width: 70%;
           }
         }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 999px) {
+
+  .blog-section {
+
+    .content {
+      justify-content: center;
+  
+      aside {
+        display: none;
+      }
+      .content-blog {
+        max-width: 600px;
+        width: 100%;
       }
     }
   }
