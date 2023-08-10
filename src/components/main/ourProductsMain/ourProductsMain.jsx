@@ -1,11 +1,15 @@
-import { SiteHomeMainWrapper } from "../../sectionWrappers/siteMainHomeWrapper";
+import "./ourProductsMain.scss";
 import { ContentText } from "../contentTextUpper/contentText";
 import { OurProductMainItemMap } from "./ourProductMainItemMap";
-import "./ourProductsMain.scss";
+import { SiteHomeMainWrapper } from "../../sectionWrappers/siteMainHomeWrapper";
+import { useInView } from "react-intersection-observer";
 import { useState } from "react";
 
 export const OurProductsMain = () => {
   const [sliceProduct, setSliceProduct] = useState(8);
+  const [contentItemView, contentItemInView] = useInView({
+    threshold: 0.1,
+  });
 
   const loadMore = () => {
     setSliceProduct(16);
@@ -25,10 +29,14 @@ export const OurProductsMain = () => {
 
   return (
     <SiteHomeMainWrapper wrapperSpecialClass="our-products-section">
-      <div className="content" id="shop-now">
+      <div className="content" id="shop-now" ref={contentItemView}>
         <ContentText headerText="Our Products" />
 
-        <div className="gallery-content">
+        <div
+          className={`gallery-content ${
+            contentItemInView ? " animationLeft" : " animationUP"
+          }`}
+        >
           {OurProductMainItemMap.slice(0, sliceProduct).map((item, index) => {
             return (
               <div className="gallery-item" key={index}>

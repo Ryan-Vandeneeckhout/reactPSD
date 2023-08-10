@@ -1,11 +1,19 @@
 import { SiteHomeMainWrapper } from "../../sectionWrappers/siteMainHomeWrapper";
 import "./aboutUsHomeMain.scss";
+import { useInView } from "react-intersection-observer";
 
 export const AboutUsHomeMain = () => {
+  const [contentItemView, contentItemInView] = useInView({
+    threshold: 0.1,
+  });
   return (
     <SiteHomeMainWrapper wrapperSpecialClass="about-us-section">
-      <div className="content">
-        <div className="textContent">
+      <div ref={contentItemView} className="content">
+        <div
+          className={`textContent ${
+            contentItemInView ? " animationLeft" : " animationZero2"
+          }`}
+        >
           <h4>About Us</h4>
           <h2>Providing the Best Organic Products</h2>
           <p>
@@ -28,7 +36,11 @@ export const AboutUsHomeMain = () => {
             Shop Now
           </a>
         </div>
-        <div className="text-box">
+        <div
+          className={`text-box ${
+            contentItemInView ? " animationLeft" : " animationZero"
+          }`}
+        >
           <h3>
             We've been providing the best selection for organic products for 20
             Years.
